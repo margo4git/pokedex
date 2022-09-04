@@ -1,0 +1,24 @@
+$colors: () !default;
+$colors: map-merge((
+    grass: linear-gradient(135deg, #09e485 0%,#0291e3 100%),
+    normal: linear-gradient(135deg, #F2CD48 0%,#8e6f5f 100%),
+    fire: linear-gradient(135deg, #F9445A 0%,#FD803F 100%),
+    poison: linear-gradient(135deg, #8019C6 0%,#2F93CC 100%),
+    water: linear-gradient(135deg, #78a4e7 0%,#2f32cc 100%),
+    electric: linear-gradient(135deg, #a0c619 0%,#ccaa2f 100%),
+    ice: linear-gradient(135deg, #1964c6 0%,#2F93CC 100%),
+    fighting: linear-gradient(135deg, #c6194a 0%,#be8282 100%),
+    ground: linear-gradient(135deg, #c68419 0%,#a25747 100%),
+    flying: linear-gradient(135deg, #7519c6 0%,#c72fcc 100%),
+    psychic: linear-gradient(135deg, #b719c6 0%,#dc70d1 100%),
+    bug: linear-gradient(135deg, #19c68f 0%,#7ba471 100%),
+    rock: linear-gradient(135deg, #acc619 0%,#887425 100%),
+    ghost: linear-gradient(135deg, #8664a0 0%,#590b64 100%),
+    dark: linear-gradient(135deg, #6e5f5b 0%,#3c3a33 100%),
+    dragon: linear-gradient(135deg, #cc7dc2 0%,#5d1ba8 100%),
+    steel: linear-gradient(135deg, #6e7066 0%,#64625a 100%),
+    fairy: linear-gradient(135deg, #9a75a6 0%,#cd4bcb 100%),
+    
+), $colors);
+
+$secondary: #3761a8;

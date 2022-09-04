@@ -1,0 +1,128 @@
+@import "constants";
+
+$cardWidth: 150px;
+
+.card-list-load-more{
+    display: flex;
+    flex-direction: column;
+    .dropdown{
+        padding: 8px;
+        border-radius: 8px;
+    }
+    .load-more {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 24px;
+        button {
+            padding: 12px;
+            background-color: $secondary;
+            color: white;
+            border-width: 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+    }
+    .card-list {
+        display: flex;
+        width: $cardWidth * 3 + 24;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-bottom: 24px;
+        .card-list-item  {
+            margin-right: 12px;
+            display: flex;
+            flex-direction: column;
+            width: $cardWidth;
+            border: solid; 
+            box-sizing: border-box;
+            background-color: #F5EDDC;
+            margin-top: 24px;
+            border-radius: 8px;
+            border-color: #CFD2CF;
+        }
+        .card-list-item:nth-child(3n+3) {  
+            margin-right: 0px;
+          }
+        p{
+            margin: 0 auto;
+            font-weight: bold;
+        }
+
+        @mixin type-color($parent, $color) {
+            #{$parent} {
+            background:  $color;
+            color:white;
+            border-radius: 4px;
+            margin: 4px;
+            padding: 2px;
+            }
+        }
+        @each $color, $value in $colors {
+            @include type-color(".type-color-#{$color}", $value);
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .card-list-load-more{
+        .card-list {
+            width: $cardWidth * 2 + 36;
+        }
+    }
+}
+.card-details {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #F5EDDC;
+    border: 1px solid  #CFD2CF;
+    border-radius: 8px;
+    margin-left: 48px;
+    padding: 8px;
+    min-width: 200px;
+    right: 10%;
+    position: fixed;
+    .close-button {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background-color: $secondary;
+        color: white;
+        border-width: 0;
+        padding: 4px 8px;
+        border-radius: 8px ;
+
+    }
+    .pokemon-img-name{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+    }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid;
+      }
+    td, th{
+        font-weight:300;
+        width: 100%;
+        border-collapse: collapse;  
+        border: 1px solid;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .card-details {
+        right: 5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .card-details {
+        right: auto;
+        box-shadow: 0 24px 24px rgba(0,0,0,0.3);
+    }
+}
+
+

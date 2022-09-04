@@ -1,0 +1,52 @@
+@import url(./general.scss);
+@import url(./components.scss);
+@import url(./constants.scss);
+
+@font-face {
+  font-family: 'PokemonHollow';
+  src:  url('./../assets/fonts/PokemonHollow.ttf');
+}
+
+@font-face {
+  font-family: 'PokemonSolid';
+  src:  url('./../assets/fonts/PokemonSolid.ttf');
+}
+h1{
+  font-family: 'PokemonSolid';
+  font-size: 48px;
+  line-height: 24px;
+  color: #feca1b;
+  -webkit-text-stroke: 2px #3761a8;
+  letter-spacing: 4px;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  width: 100%;
+  padding-bottom: 24px;
+
+}
